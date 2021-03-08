@@ -7,7 +7,7 @@ class SegmentTree {
 private:
     T *tree;
     T *data;
-    int sz;
+    int sz{};
     function<T(T, T)> merger;
 
     int leftChild(int treeIndex) { return treeIndex * 2 + 1; }
