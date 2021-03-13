@@ -26,6 +26,7 @@ void __mergesort(int arr[], int aux[], int l, int r) {
 void mergesort(int arr[], int n) {
     int *aux = new int[n];
     __mergesort(arr, aux, 0, n - 1);
+    delete [] aux;
 }
 
 
@@ -72,7 +73,7 @@ void heapsort(int arr[], int n) {
     for (int i = (n - 1 - 1) / 2; i >= 0; --i)
         shiftdown(arr, i, n);
     int j = n - 1;
-    while (j >= 0) {
+    while (j > 0) {
         swap(arr[0], arr[j]);
         shiftdown(arr, 0, j);
         --j;
@@ -164,6 +165,13 @@ int main(int argc, char* argv[]) {
     assert(isSame(arr, arr4, n));
     assert(isSame(arr, arr5, n));
     assert(isSame(arr, arr6, n));
+
+    delete [] arr;
+    delete [] arr2;
+    delete [] arr3;
+    delete [] arr4;
+    delete [] arr5;
+    delete [] arr6;
 
     return 0;
 }
