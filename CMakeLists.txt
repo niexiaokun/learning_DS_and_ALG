@@ -8,6 +8,7 @@ add_executable(SegmentTree SegmentTree.cpp)
 add_executable(heap heap.cpp)
 add_executable(trie trie.cpp)
 add_executable(topk topk.cpp)
+add_executable(kmp kmp.cpp)
 
 
 
